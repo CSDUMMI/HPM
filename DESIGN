@@ -1,0 +1,53 @@
+Design of the Haskell Packet Manager
+
+Preamble:
+Haskell Developers you have the most
+disturbing Ecosystem and I will
+never want to build a Project with
+the "Tools" you can't call Project
+Managers.
+Because I can't use those "Tools",
+I need to write one myself.
+
+Goals:
+1. It shouldn't be a general purpose
+   Program, but rather something
+   I can use.
+2. I don't write into a Project File
+   if I don't need to.
+3. I need those Packages from Hackage, usw.
+
+
+
+Usage:
+hpm entry-file root 
+               :  Builds entry-file in root Directory
+                  
+hpm init       :  Command to initialize Project File,
+                  only necessary to build a Libary for Hackage.
+hpm install root
+               :  Install Libaries from Hackage, no hpm init necessary,
+                  in root/.hpm/ Directory, in the Project you can import them
+                  as in their Module Definiton.
+
+HPM init:
+The Init Command Files the Project.hs
+File. It is writen in Haskell such that you
+can import that File and use the Variables
+Defined in it.
+If you run hpm init it will ask you for these
+informations about your project.
+
+Name :: String
+
+Description :: String
+
+-- You'll be given certain options, but
+-- you can also enter your own License 
+License :: String
+
+-- A Data Type Defined in Project.hs
+-- With that you can have nice Representations
+-- of Version Numbers (3 Digits)
+Version :: VNum
+
