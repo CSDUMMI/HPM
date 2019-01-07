@@ -7,6 +7,7 @@ import Data.List
 -- Own Modules
 import qualified HPM.Init       as HPM
 import qualified HPM.Install    as HPM
+import qualified HPM.View       as HPM
 import qualified HPM.Build      as HPM
 
 main = do
@@ -16,4 +17,5 @@ main = do
 callPro :: [String] -> IO ()
 callPro ("init":args) = HPM.init args
 callPro ("install":args) = HPM.install args
+callPro ("view":args) = HPM.view args
 callPro (args) = HPM.build args
