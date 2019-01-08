@@ -20,15 +20,18 @@ Goals:
 
 
 Usage:
-hpm entry-file root 
+hpm entry-file <root> 
                :  Builds entry-file in root Directory
                   
 hpm init       :  Command to initialize Project File,
                   only necessary to build a Libary for Hackage.
-hpm install root
+hpm install <root>
                :  Install Libaries from Hackage, no hpm init necessary,
                   in root/.hpm/ Directory, in the Project you can import them
                   as in their Module Definiton.
+
+hpm view <root>
+              : shows information about root Directory ( Libaries installed, Project File )
 
 HPM init:
 The Init Command Files the Project.hs
